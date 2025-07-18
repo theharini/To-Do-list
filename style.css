@@ -1,91 +1,106 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Includes padding and border in element's total width and height */
 }
-.container{
-    width:100%;
-    background-color: darkgray;
-    padding:10px;
-    min-height: 100vh;
-}
-.todo-app{
-    width:100%;
-    max-width: 540px;
-    background: #fff;
-    margin:100px auto 20px;
-    padding:40px 30px 70px;
-    border-radius:10px;
-}
-.todo-app h2{
-    color:#002765;
-    display:flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.row{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-input{
-    flex:1;
-    border:none;
-    outline:none;
-    background:transparent;
-    padding:10px;
-    font-weight: 14px;
-}
-button{
-    border:none;
-    outline: none;
-    padding:15px 50px;
-    background:#ff5945;
-    color:#fff;
-    font-size: 16px;
-    cursor:pointer;
-    border-radius: 40px;
-}
-ul li{
-    list-style:none;
-    font-size:17px;
-    padding:12px 8px 12px 50px;
-    user-select:none;
-    cursor:pointer;
-    position:relative;
-}
-ul li::before{
-    content:'';
-    position: absolute;
-    height: 28px;
-    width:28px;
-    border-radius: 50%;
-    background-size: cover;
-    background-position: center;
-    top:12px;
-    left:8px;
-}
-ul li.checked{
-    color:#555;
-    text-decoration: line-through;
 
+.container {
+    width: 100%; /* Makes the container span full width of the page */
+    background-color: darkgray; /* Sets background color */
+    padding: 10px; /* Adds padding inside the container */
+    min-height: 100vh; /* Ensures container height is at least the full viewport height */
 }
-ul li.checked::before{
-background-image: url(images/checked.png);
+
+.todo-app {
+    width: 100%; /* Makes it responsive within container */
+    max-width: 540px; /* Limits the width to 540px */
+    background: #fff; /* Sets background color to white */
+    margin: 100px auto 20px; /* Top:100px, Bottom:20px, horizontally center (auto) */
+    padding: 40px 30px 70px; /* Padding: top 40px, sides 30px, bottom 70px */
+    border-radius: 10px; /* Rounded corners */
 }
-ul li span{
-    position:absolute;
-    right:0;
-    top:5px;
-    width:40px;
-    height:40px;
-    font-size:22px;
-    color:#555;
-    line-height:40px;
-    text-align:center;
-    border-radius:50%;
+
+.todo-app h2 {
+    color: #002765; /* Dark blue color for heading text */
+    display: flex; /* Enables flex layout */
+    align-items: center; /* Vertically centers image with text */
+    margin-bottom: 20px; /* Adds space below heading */
+}
+
+.row {
+    display: flex; /* Aligns input and button in a row */
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Distributes space between input and button */
+    background-color: #edeef0; /* Light grey background for input area */
+    border-radius: 30px; /* Rounded border */
+    padding-left: 20px; /* Padding on left side */
+    margin-bottom: 25px; /* Space below the row */
+}
+
+input {
+    flex: 1; /* Takes up remaining space in row */
+    border: none; /* Removes default border */
+    outline: none; /* Removes focus outline */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Adds padding inside the input */
+    font-weight: 14px; /* ⚠️ Mistake: should be `font-size: 14px;` */
+}
+
+button {
+    border: none; /* Removes border */
+    outline: none; /* Removes focus outline */
+    padding: 15px 50px; /* Vertical: 15px, Horizontal: 50px */
+    background: #ff5945; /* Red-orange background color */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Sets text size */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    border-radius: 40px; /* Rounded button */
+}
+
+ul li {
+    list-style: none; /* Removes bullet points */
+    font-size: 17px; /* Sets font size */
+    padding: 12px 8px 12px 50px; /* Adds padding with space for custom checkbox on left */
+    user-select: none; /* Disables text selection */
+    cursor: pointer; /* Shows pointer cursor */
+    position: relative; /* Needed for positioning pseudo-elements (like ::before) */
+}
+
+ul li::before {
+    content: ''; /* Empty content for custom checkbox */
+    position: absolute; /* Allows absolute positioning inside relative parent */
+    height: 28px; /* Height of custom checkbox */
+    width: 28px; /* Width of custom checkbox */
+    border-radius: 50%; /* Makes checkbox circular */
+    background-image: url(unchecked.png); /* Image for unchecked task */
+    background-size: cover; /* Ensures image covers the whole box */
+    background-position: center; /* Centers the image */
+    top: 12px; /* Positions from top */
+    left: 8px; /* Positions from left */
+}
+
+ul li.checked {
+    color: #555; /* Dimmed text color */
+    text-decoration: line-through; /* Draws line through completed task */
+}
+
+ul li.checked::before {
+    background-image: url(checked.png); /* Image for checked task */
+}
+
+ul li span {
+    position: absolute; /* Allows precise positioning */
+    right: 0; /* Aligns to right */
+    top: 5px; /* Positions from top */
+    width: 40px; /* Width of delete button */
+    height: 40px; /* Height of delete button */
+    font-size: 22px; /* Size of the "×" symbol */
+    color: #555; /* Gray color for delete symbol */
+    line-height: 40px; /* Vertically centers the symbol */
+    text-align: center; /* Horizontally centers the symbol */
+    border-radius: 50%; /* Makes it circular */
+}
+
+ul li span:hover {
+    background: #edeef0; /* Light background on hover */
 }
