@@ -1,25 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html> <!-- Declares the document type and HTML version (HTML5) -->
+<html lang="en"> <!-- Starts the HTML document with language set to English -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To Do List</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8"> <!-- Sets character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the layout responsive on different devices -->
+    <title>To Do List</title> <!-- Sets the title of the webpage (appears in browser tab) -->
+    <link rel="stylesheet" href="style.css"> <!-- Links the external CSS file to style the page -->
 </head>
-<body>
-    <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List</h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Add Your text">
-                <button>Add</button>
+<body> <!-- Begins the body of the HTML document (content visible to users) -->
+    <div class="container"> <!-- Main container for the entire app -->
+        <div class="todo-app"> <!-- Contains the actual to-do list application box -->
+            <h2>To-Do List <img src="icon.png"></h2> <!-- Heading for the app with an icon image -->
+            
+            <div class="row"> <!-- A row that contains input field and Add button -->
+                <input type="text" id="input-box" placeholder="Add Your text"> <!-- Text box for user to enter new tasks -->
+                <button onclick="addTask()">Add</button> <!-- Button to trigger addTask() function when clicked -->
             </div>
-            <ul id="list-container">
-                <li>Task 1</li>
+
+            <ul id="list-container"> <!-- Unordered list to display all the tasks -->
+                <!-- Sample list items are commented out for reference -->
+                <!-- <li class="checked">Task 1</li>
                 <li>Task 2</li>
-                <li>Task 3</li>
+                <li>Task 3</li> -->
             </ul>
         </div>
     </div>
+
+    <script src="todo.js"></script> <!-- Links the external JavaScript file for interactivity -->
 </body>
 </html>
