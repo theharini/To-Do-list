@@ -1,4 +1,4 @@
-
+<<<<<<< HEAD
 * {
     margin: 0; /* Removes default margin from all elements */
     padding: 0; /* Removes default padding from all elements */
@@ -105,7 +105,7 @@ ul li span {
 ul li span:hover {
     background: #edeef0; /* Light background on hover */
 }
-
+=======
 * {
     margin: 0; /* Removes default margin from all elements */
     padding: 0; /* Removes default padding from all elements */
@@ -212,4 +212,4 @@ ul li span {
 ul li span:hover {
     background: #edeef0; /* Light background on hover */
 }
-
+>>>>>>> 9e67ffb49a7df0e6a57daf75fd1da7ef05189a05
